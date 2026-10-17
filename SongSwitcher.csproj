@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>SongSwitcher</AssemblyName>
+    <RootNamespace>SongSwitcher</RootNamespace>
+    <!-- 把图标嵌进 exe：资源管理器、任务栏、Alt-Tab、标题栏都取这张图 -->
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 供 XAML 以 pack URI 引用（Window.Icon）；.ico 需显式声明为 Resource -->
+    <Resource Include="Assets\app.ico" />
+    <Resource Include="Assets\app-icon-256.png" />
+  </ItemGroup>
+
+</Project>
